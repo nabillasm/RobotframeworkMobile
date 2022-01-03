@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211221 18:56:08.951" rpa="false" schemaversion="2">
+<suite id="s1" name="Login" source="N:\FILE NABILLA ALL\NABILLA\BOOTCAMP\GITHUB\belajar-robotframework-web\login.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${WebURL}</arg>
+<arg>${BROWSERS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211221 18:56:09.459" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20211221 18:56:09.458" endtime="20211221 18:56:12.744"/>
+</kw>
+<test id="s1-t1" name="Login with valid credentials standar_user">
+<kw name="I want to login with valid credentials">
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211221 18:56:12.750" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20211221 18:56:12.748" endtime="20211221 18:56:13.082"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211221 18:56:13.083" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20211221 18:56:13.082" endtime="20211221 18:56:13.277"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211221 18:56:13.278" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20211221 18:56:13.277" endtime="20211221 18:56:13.724"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211221 18:56:15.523" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211221 18:56:13.725" endtime="20211221 18:56:15.523"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Sauce Labs Backpack</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211221 18:56:15.552" level="INFO">Current page contains text 'Sauce Labs Backpack'.</msg>
+<status status="PASS" starttime="20211221 18:56:15.523" endtime="20211221 18:56:15.552"/>
+</kw>
+<status status="PASS" starttime="20211221 18:56:12.747" endtime="20211221 18:56:15.552"/>
+</kw>
+<status status="PASS" starttime="20211221 18:56:12.745" endtime="20211221 18:56:15.553"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211221 18:56:15.557" endtime="20211221 18:56:18.230"/>
+</kw>
+<status status="PASS" starttime="20211221 18:56:08.955" endtime="20211221 18:56:18.230"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
